@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  novnc:
+    build:
+      context: .
+    container_name: tadano_competition_env
+    ports:
+      - "8080:8080"
+    volumes:
+      - $PWD/data/config:/root/.config
+      - $PWD/data/Desktop:/root/Desktop
+      - $PWD/sim_config:/usr/local/lib/tdn_libs
+      - $PWD/src:/root/tadano_sim
